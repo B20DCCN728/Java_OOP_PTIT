@@ -1,5 +1,5 @@
 import java.util.*;
-public class Tong_Uoc_So {
+public class Tong_Uoc_So_1 {
     static int mod = (int)1e6 * 2;
     static int[] era = new int[mod + 5];
     static void Era(){
