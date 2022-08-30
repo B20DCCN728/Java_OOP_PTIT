@@ -1,3 +1,3 @@
 # Java_OOP
-Object-Oriented Programming.
-Full Source Code Java PTIT: https://code.ptit.edu.vn
+Object-Oriented Programming
+PTIT Code: https://code.ptit.edu.vn
