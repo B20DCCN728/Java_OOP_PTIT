@@ -6,7 +6,7 @@ import java.math.*;
 //
 public class Chia_Het_Cho_11 {
     static long Mod(String solve){
-        long mod = 0, tmp;
+        long mod = 0;
         for(int i = 0;i < solve.length();i++){
             mod = (mod * 10 + solve.charAt(i) - '0') % 11; 
         }
