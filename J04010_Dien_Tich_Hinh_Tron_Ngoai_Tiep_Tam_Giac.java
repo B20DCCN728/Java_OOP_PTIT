@@ -1,4 +1,4 @@
-package dien_tich_hinh_trong_ngoai_tiep_tam_giac;
+package dien_tich_hinh_tron_ngoai_tiep_tam_giac;
 
 import java.util.*;
 import java.lang.*;
