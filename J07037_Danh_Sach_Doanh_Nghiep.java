@@ -31,7 +31,7 @@ public class Danh_Sach_Doanh_Nghiep {
      */
     public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
-        Scanner sc = new Scanner(new File("Input–DN.in"));
+        Scanner sc = new Scanner(new File("DN.in"));
         ArrayList<Enterprise> set = new ArrayList<>();
         int t = Integer.parseInt(sc.nextLine());
         while(t-- > 0){
