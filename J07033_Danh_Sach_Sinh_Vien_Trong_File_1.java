@@ -9,7 +9,7 @@ class Student implements Comparable<Student>{
     private String code, name = "", eclass, email;
     public Student(String code, String notTrueName, String eclass, String email){
         this.code = code;
-        String[] solve = notTrueName.toLowerCase().replaceAll("\\s+", " ").split(" ");
+        String[] solve = notTrueName.toLowerCase().trim().replaceAll("\\s+", " ").split(" ");
         for(int i = 0;i < solve.length;i++){
             this.name += Character.toUpperCase(solve[i].charAt(0)) + solve[i].substring(1);
             this.name += " ";
