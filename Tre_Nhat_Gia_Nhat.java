@@ -6,6 +6,27 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 //
+class YoungAndOld implements Comparable<YoungAndOld>{
+    private String name;
+    private long time;
+    public YoungAndOld(String name, Date date) throws ParseException{
+        this.name = name;
+        SimpleDateFormat myDate = new SimpleDateFormat("dd/MM/yyyy");
+        Date now = myDate.parse("10/04/2022");
+        time = now.getTime() - date.getTime();
+    }
+    //
+    @Override
+    public int compareTo(YoungAndOld s){
+        return Long.compare(this.time, s.time);
+    }
+    //
+    @Override 
+    public String toString(){
+        return this.name;
+    }
+}
+//
 public class Tre_Nhat_Gia_Nhat {
     public static void main(String[] args) throws ParseException {
         // TODO code application logic here
