@@ -6,6 +6,34 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 //
+class Trainning implements Comparable<Trainning>{
+    static int id = 0;
+    private String num, code, fullName, group, email, enterprise;
+    public Trainning(String code, String fullName, String group, String email, String enterprise){
+        id += 1;
+        this.num = String.valueOf(id);
+        this.code = code;
+        this.fullName = fullName;
+        this.group = group;
+        this.email = email;
+        this.enterprise = enterprise;
+    } 
+    //
+    protected String getEnterprise(){
+        return this.enterprise;
+    }
+    //
+    @Override
+    public int compareTo(Trainning s){
+        return this.code.compareTo(s.code);
+    }
+    //
+    @Override
+    public String toString(){
+        return this.num + " " + this.code + " " + this.fullName + " " + this.group + " " + this.email + " " + this.enterprise;
+    }
+}
+//
 public class Danh_Sach_Thuc_Tap_2 {
     public static void main(String[] args) {
         // TODO code application logic here
