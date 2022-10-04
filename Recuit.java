@@ -1,5 +1,12 @@
+//Created by Campus
 package xet_tuyen;
-public class Recuit {
+import java.util.*;
+import java.lang.*;
+import java.math.*;
+import java.io.*;
+import java.text.*;
+//
+class Recuit {
     static int id = 0;
     private String code = "PH", fullname = "", age, status;
     private double theoryPoint, practicalPoint;
@@ -43,3 +50,24 @@ public class Recuit {
         return this.code + " " + this.fullname + " " + this.age + " " + this.totalScore + " " + this.status;
     }
 }
+
+//
+public class Xet_Tuyen {
+    /**
+     * @OOP
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+        // TODO code application logic here
+        Scanner sc = new Scanner(new File("XETTUYEN.in"));
+        ArrayList<Recuit> solve = new ArrayList<>();
+        int t = Integer.parseInt(sc.nextLine());
+        while(t-- > 0){
+            solve.add(new Recuit(sc.nextLine(), sc.nextLine(), Double.parseDouble(sc.nextLine()), Double.parseDouble(sc.nextLine())));
+        }
+        for(Recuit x: solve){
+            System.out.println(x);
+        }
+    }
+    
+}
+
