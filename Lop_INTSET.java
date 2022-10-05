@@ -6,6 +6,38 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+lass IntSet {
+    private int[] solve;
+    public IntSet(int[] solve){
+        this.solve = solve;
+    }
+    //
+    public IntSet union(IntSet s){
+        TreeSet<Integer> set = new TreeSet<>();
+        for(int i = 0;i < this.solve.length;i++) set.add(this.solve[i]);
+        for(int i = 0;i < s.solve.length;i++) set.add(s.solve[i]);
+        int[] data = new int[set.size()];
+        int k = 0;
+        for(Integer x: set){
+            data[k] = x;
+            k += 1;
+        }
+        IntSet res = new IntSet(data);
+        return res;
+    }
+    //
+    @Override
+    public String toString(){
+        ArrayList<String> res = new ArrayList<>();
+        for(int i = 0;i < this.solve.length;i++){
+            res.add(String.valueOf(this.solve[i]));
+        }
+        return "".join(" ", res);
+    }
+    //
+}
+
+//
 public class Lop_INTSET {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
