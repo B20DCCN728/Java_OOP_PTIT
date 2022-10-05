@@ -6,6 +6,34 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class Complex {
+    private int real, ima;
+    public Complex(int  real, int ima){
+        this.real = real;
+        this.ima =  ima;
+    }
+    //
+    public static Complex add(Complex a, Complex b){
+        Complex res = new Complex(0, 0);
+        res.real = a.real + b.real;
+        res.ima = a.ima + b.ima;
+        return res;
+    }
+    //
+    public static Complex multiply(Complex a, Complex b){
+        Complex res = new Complex(0, 0);
+        res.real = a.real * b.real - a.ima * b.ima;
+        res.ima = a.real * b.ima + a.ima * b.real;
+        return res;
+    }
+    //
+    @Override
+    public String toString(){
+        return this.real + " + " + this.ima + "i";
+    }
+}
+
+//
 public class So_Phuc {
     public static void main(String[] args) {
         // TODO code application logic here
