@@ -6,7 +6,7 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
-lass IntSet {
+class IntSet {
     private int[] solve;
     public IntSet(int[] solve){
         this.solve = solve;
