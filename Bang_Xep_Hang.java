@@ -5,6 +5,31 @@ import java.lang.*;
 import java.math.*;
 import java.io.*;
 import java.text.*;
+//
+class Ranking implements Comparable<Ranking> {
+    private String name;
+    private int solved, submit;
+    public Ranking(String name, int solved, int submit){
+        this.name = name;
+        this.solved = solved;
+        this.submit = submit;
+    }
+    //
+    @Override
+    public int compareTo(Ranking x){
+        if(this.solved != x.solved) return x.solved - this.solved;
+        if(this.submit != x.submit) return this.submit - x.submit;
+        return this.name.compareTo(x.name);
+    }
+    //
+    @Override
+    public String toString(){
+        return this.name + " " + this.solved + " " + this.submit;
+    }
+    //
+}
+
+//
 public class Bang_Xep_Hang {
     public static void main(String[] args) {
         // TODO code application logic here
