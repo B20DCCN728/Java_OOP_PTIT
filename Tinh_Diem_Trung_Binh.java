@@ -5,7 +5,46 @@ import java.lang.*;
 import java.math.*;
 import java.io.*;
 import java.text.*;
+//
+class Score implements Comparable<Score>{
+    static int id = 0;
+    private String code = "SV", name = "", ave;
+    private int rank;
+    public Score(String notName, int score1, int score2, int score3){
+        id += 1;
+        this.code += String.format("%02d", id);
+        String[] a = notName.trim().toLowerCase().split("\\s+");
+        for(int i = 0;i < a.length;i++){ 
+            this.name += Character.toUpperCase(a[i].charAt(0)) + a[i].substring(1) + " ";
+        }
+        this.name = this.name.trim();
+        this.ave = String.format("%.2f", (double)(score1 * 3 + score2 * 3 + score3 * 2) / 8);
+    }
+    //
+    protected double getAve(){
+        return Double.parseDouble(this.ave);
+    }
+    //
+    protected void setRank(int rank){
+        this.rank = rank;
+    }
+    //
+    protected int getRank(){
+        return this.rank;
+    }
+    //
+    @Override
+    public int compareTo(Score x){
+        return Double.compare(x.getAve(), this.getAve());
+    }
+    //
+    @Override
+    public String toString(){
+        return this.code + " " + this.name + " " + this.ave + " " + this.rank;
+    }
+}
 
+//
 public class Tinh_Diem_Trung_Binh {
     /**
      * @param args the command line arguments
