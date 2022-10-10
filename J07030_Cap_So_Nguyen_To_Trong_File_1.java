@@ -3,6 +3,7 @@ package cap_so_nguyen_to_trong_file_1_ver2;
 import java.util.*;
 import java.lang.*;
 import java.text.*;
+//Created by Campus
 import java.io.*;
 public class Cap_So_Nguyen_To_Trong_File_1_ver2 {
     static boolean isCheck(int n){
