@@ -18,6 +18,7 @@ public class Xep_Hang {
             int x = sc.nextInt();
             int y = sc.nextInt();
             if(solve.containsKey(x)){
+                //có thể có vài người đến cùng lúc nên cộng thêm 
                 y += solve.get(x);
             }
             solve.put(x, y);
