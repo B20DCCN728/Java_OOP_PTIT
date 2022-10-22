@@ -6,6 +6,34 @@ import java.lang.*;
 import java.text.*;
 import java.math.*;
 //
+class Student implements Comparable<Student>{
+    private String code, name, phoneNumber, email, ho, dem = "",ten;
+    public Student(String code, String name, String phoneNumber, String email){
+        this.code = code;
+        this.name = name;
+        String[] format = name.split(" ");
+        this.ho = format[0];
+        this.ten = format[format.length - 1];
+        for(int i = 1;i < format.length - 1;i++){
+            this.dem += format[i] + " ";
+        }
+        this.dem = this.dem.trim();
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+    @Override
+    public int compareTo(Student x){
+        if(this.ten.compareTo(x.ten) != 0) return this.ten.compareTo(x.ten);
+        if(this.ho.compareTo(x.ho) != 0) return this.ho.compareTo(x.ho);
+        if(this.dem.compareTo(x.dem) != 0) return this.dem.compareTo(x.dem);
+        return this.code.compareTo(x.code);
+    }
+    @Override
+    public String toString(){
+        return this.code + " " + this.name + " " + this.phoneNumber + " " + this.email;
+    }
+}
+//
 public class Sap_Xep_Danh_Sach_Sinh_Vien_File {
     /**
      * @param args the command line arguments
