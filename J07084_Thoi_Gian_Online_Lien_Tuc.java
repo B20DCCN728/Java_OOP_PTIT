@@ -5,6 +5,28 @@ import java.lang.*;
 import java.text.*;
 import java.io.*;
 //
+class Online implements Comparable<Online>{
+    private String name;
+    private Date timeStart, timeEnd;
+    private long totalTime;
+    public Online(String name, Date timeStart, Date timeEnd){
+        this.name = name;
+        this.timeStart = timeStart;
+        this.timeEnd = timeEnd;
+        long mm = this.timeEnd.getTime() - this.timeStart.getTime();
+        this.totalTime = TimeUnit.MINUTES.convert(mm, TimeUnit.MILLISECONDS);
+    }
+    @Override
+    public int compareTo(Online a){
+        if(Long.compare(a.totalTime, this.totalTime) != 0) return Long.compare(a.totalTime, this.totalTime);
+        return this.name.compareTo(a.name);
+    }
+    @Override
+    public String toString(){
+        return this.name + " " + this.totalTime;
+    }
+}
+//
 public class Thoi_Gian_Online_Lien_Tuc {
     public static void main(String[] args) throws FileNotFoundException, ParseException {
         // TODO code application logic here
