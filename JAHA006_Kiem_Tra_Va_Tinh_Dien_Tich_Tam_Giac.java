@@ -11,6 +11,7 @@ class Point {
         this.x = x;
         this.y = y;
     }
+    //quên không tạo hàm tính luôn kc ở đây :]]]]]
 }
 
 //
