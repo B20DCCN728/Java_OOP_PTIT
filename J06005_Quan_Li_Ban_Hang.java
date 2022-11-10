@@ -40,15 +40,6 @@ class Product {
     public String getCode(){
         return this.code;
     }
-    public String getName(){
-        return this.name;
-    }
-    public String getDonVi(){
-        return this.donVi;
-    }
-    public int getBuyPrice(){
-        return this.buyPrice;
-    }
     public int getSellPrice(){
         return this.sellPrice;
     }
