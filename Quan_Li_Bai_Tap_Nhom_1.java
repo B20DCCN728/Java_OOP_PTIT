@@ -5,6 +5,39 @@ import java.lang.*;
 import java.text.*;
 import java.io.*;
 //
+class Topic {
+    private String topic;
+    private static HashMap<Integer, String> a = new HashMap<>();
+    public static void setTopic(int i, String s){
+        a.put(i, s);
+    }
+    public Topic(){
+    }
+    public static String getTopic(int x){
+        return a.get(x);
+    }   
+}
+
+//
+class Developer {
+    private String code, name, phoneNumber;
+    private int numTopic;
+    public Developer(String code, String name, String phoneNumber, int numTopic){
+        this.code = code;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.numTopic = numTopic;
+    }
+    public int getNumTopic(){
+        return this.numTopic;
+    }
+    @Override
+    public String toString(){
+        return this.code + " " + this.name + " " + this.phoneNumber;
+    }  
+}
+
+//
 public class Quan_Li_Bai_Tap_Nhom_1 {
     public static void main(String[] args) {
         // TODO code application logic here
