@@ -68,7 +68,6 @@ class Bill {
         return this.code + " " + client + " " + product + " " + count + " " + total;
     }
 }
-
 //
 public class Quan_Li_Ban_Hang {
     public static void main(String[] args) {
