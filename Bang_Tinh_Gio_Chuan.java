@@ -5,6 +5,35 @@ import java.lang.*;
 import java.text.*;
 import java.io.*;
 //
+class Subject {
+    private String code, name;
+    public Subject(String code, String name){
+        this.code = code;
+        this.name = name;
+    }
+}
+//
+class Teacher {
+    private String code, name;
+    private double total = 0;
+    private Subject subject;
+    public Teacher(String code, String name){
+        this.code = code;
+        this.name = name;
+    }
+    public String getCode(){
+        return this.code;
+    }
+    public void setTime(double time){
+        this.total += time;
+    }
+    @Override
+    public String toString(){
+        return this.name + " " + String.format("%.2f", this.total);
+    }
+}
+
+//
 public class Bang_Tinh_Gio_Chuan {
     public static void main(String[] args) {
         // TODO code application logic here
