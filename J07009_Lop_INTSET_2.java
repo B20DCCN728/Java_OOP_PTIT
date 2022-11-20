@@ -30,7 +30,6 @@ class IntSet {
         return res;
     }
 }
-
 //
 public class Lop_INTSET_2 {
     public static void main(String[] args) throws IOException {
