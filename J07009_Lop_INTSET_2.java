@@ -5,6 +5,33 @@ import java.lang.*;
 import java.text.*;
 import java.io.*;
 //
+class IntSet {
+    private TreeSet<Integer> s;
+    public IntSet(int[] a){
+        this.s = new TreeSet<>();
+        for(int i = 0;i < a.length;i++){
+            this.s.add(a[i]);
+        }
+    }
+    public IntSet(TreeSet<Integer> s){
+        this.s = s;
+    }
+    public IntSet intersection(IntSet ref){
+        this.s.retainAll(ref.s);
+        IntSet res = new IntSet(this.s);
+        return res;
+    }
+    @Override 
+    public String toString(){
+        String res = "";
+        for(Integer x: this.s){
+            res += String.valueOf(x) + " ";
+        }
+        return res;
+    }
+}
+
+//
 public class Lop_INTSET_2 {
     public static void main(String[] args) throws IOException {
             Scanner sc = new Scanner(new File("DATA.in"));
