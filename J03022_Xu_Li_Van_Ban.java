@@ -18,10 +18,9 @@ public class Xu_Li_Van_Ban {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+        boolean firstWord = true;
         while(sc.hasNextLine()){
             String s = sc.nextLine();
-            boolean firstWord = true;
             StringTokenizer stn = new StringTokenizer(s);
             while(stn.hasMoreTokens()){
                 String a = stn.nextToken();
