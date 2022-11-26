@@ -6,6 +6,30 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class Teacher {
+    private String code, name, chucVu;
+    private int heSo, salary, bonus, total;
+    //constructor teacher 
+    public Teacher(String code, String name, int salary){
+        this.code = code;
+        this.chucVu = this.code.substring(0, 2);
+        this.heSo = Integer.parseInt(this.code.substring(2));
+        this.name = name;
+        this.salary = salary;
+        this.bonus = this.getBonus();
+        this.total = this.salary * this.heSo + this.bonus;
+    }
+    private int getBonus(){
+        if(chucVu.equals("HT")) return 2000000;
+        else if(chucVu.equals("HP")) return 900000;
+        else return 500000;
+    }
+    @Override
+    public String toString(){
+        return code + " " + this.name + " " + this.heSo + " " + this.bonus + " " + this.total;
+    }
+}
+//
 public class Bang_Thu_Nhap_Giao_Vien {
     /**
      * @param args the command line arguments
