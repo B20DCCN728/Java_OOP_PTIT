@@ -6,7 +6,50 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
-public class Cau_Lac_Bo_Bong_Da {
+class InfoOfMatch implements Comparable<InfoOfMatch>{
+    private String code, name;
+    private int count, total;
+    public InfoOfMatch(String code, int count){
+        this.code = code;
+        this.count = count;
+        this.total = this.count * Club.Item.get(this.code.substring(1, 3)).getPrice();
+        this.name = Club.Item.get(code.substring(1, 3)).getName();
+    } 
+    @Override
+    public int compareTo(InfoOfMatch s){
+        if(this.total != s.total) return s.total - this.total;
+        return this.name.compareTo(s.name);
+    }
+    @Override
+    public String toString(){
+        return this.code + " " + name + " " + this.total;
+    }
+}
+
+//
+public class Club {
+    private String code, name;
+    private int price;
+    static HashMap<String, Club> Item = new HashMap<>();
+    public Club(String code, String name, int price){
+        this.code = code;
+        this.name = name;
+        this.price = price;
+    }
+    public Club(){      
+    }
+    protected String getName(){
+        return this.name;
+    }
+    protected String getCode(){
+        return this.code;
+    }
+    protected int getPrice(){
+        return this.price;
+    }
+}
+//
+class Cau_Lac_Bo_Bong_Da {
     /**
      * @param args the command line arguments
      */
