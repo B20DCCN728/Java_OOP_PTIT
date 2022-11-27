@@ -6,6 +6,28 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class Products implements Comparable<Products> {
+    private String code, name;
+    private long count, price, discount, total;
+    public Products(String code, String name, long count, long price, long discount){
+        this.code = code;
+        this.name = name;
+        this.count = count;
+        this.price = price;
+        this.discount = discount;
+        this.total = this.count * this.price - this.discount;
+    }
+    @Override
+    public int compareTo(Products s){
+        return Long.compare(s.total, this.total);
+    }
+    @Override
+    public String toString(){
+        return this.code + " " + this.name + " " + this.count + " " + this.price + " " + this.discount + " " + this.total;
+    }
+}
+
+//
 public class Tinh_Tien {
     /**
      * @param args the command line arguments
