@@ -6,6 +6,38 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class Student {
+    private String code, name, clas, finalStatus;
+    private int score;
+    public Student(String code, String name, String clas){
+        this.code = code;
+        this.name = name;
+        this.clas = clas;
+    }
+    public void setData(String data){
+        int res = 10;
+        for(int i = 0;i < data.length();i++){
+            if(data.charAt(i) == 'v') res -= 2;
+            else if(data.charAt(i) == 'm') res -= 1;
+            else res -= 0;
+        }
+        if(res <= 0) this.score = 0;
+        else this.score = res;
+        if(this.score == 0) this.finalStatus = "0 KDDK";
+        else this.finalStatus = String.valueOf(res);
+    }
+    public String getClas(){
+        return this.clas;
+    }
+    public String getCode(){
+        return this.code;
+    }
+    @Override
+    public String toString(){
+        return this.code + " " + this.name + " " + this.clas + " " + finalStatus;
+    }
+}
+//
 public class Diem_Danh_2 {
     /**
      * @param args the command line arguments
