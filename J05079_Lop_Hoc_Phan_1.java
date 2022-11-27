@@ -6,6 +6,31 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class Group implements Comparable<Group>{
+    private String code, name, group, teacher;
+    public Group(String code, String name, String group, String teacher){
+        this.code = code;
+        this.name = name;
+        this.group = group;
+        this.teacher = teacher;
+    }
+    public String getCode(){
+        return this.code;
+    }
+    public String getName(){
+        return this.name;
+    }
+    @Override
+    public int compareTo(Group s){
+        return Integer.parseInt(this.group) - Integer.parseInt(s.group);
+    }
+    @Override
+    public String toString(){
+        return this.group + " " + this.teacher;
+    }
+}
+
+//
 public class Lop_Hoc_Phan_1 {
     /**
      * @param args the command line arguments
