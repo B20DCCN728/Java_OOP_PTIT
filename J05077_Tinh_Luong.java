@@ -6,6 +6,20 @@ import java.math.*;
 import java.io.*;
 import java.text.*;
 //
+class PhongBan {
+    private String code, name;
+    public PhongBan(String code, String name){
+        this.code = code;
+        this.name = name;
+    }
+    public String getCode(){
+        return this.code;
+    }
+    public String getName(){
+        return this.name;
+    }
+}
+//
 class Salary {
     private String code, name, group;
     private int count, price, total, year, heSo;
@@ -50,20 +64,6 @@ class Salary {
     @Override
     public String toString(){
         return this.code + " " + this.name + " " + this.ban.getName() + " " + this.total;
-    }
-}
-//
-class PhongBan {
-    private String code, name;
-    public PhongBan(String code, String name){
-        this.code = code;
-        this.name = name;
-    }
-    public String getCode(){
-        return this.code;
-    }
-    public String getName(){
-        return this.name;
     }
 }
 //
