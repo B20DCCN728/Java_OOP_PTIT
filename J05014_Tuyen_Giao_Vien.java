@@ -22,11 +22,11 @@ class GiaoVien implements Comparable<GiaoVien>{
         this.total = this.a * 2 + this.b + this.uuTien;
         this.trangThai = this.setTrangThai();
     }
-    public String setTrangThai(){
+    private String setTrangThai(){
         if(total >= 18) return "TRUNG TUYEN";
         else return "LOAI";
     }
-    public String getMonHoc(){
+    private String getMonHoc(){
         if(maXetTuyen.charAt(0) == 'A'){
             return "TOAN";
         }
@@ -35,7 +35,7 @@ class GiaoVien implements Comparable<GiaoVien>{
         }
         else return "HOA";
     }
-    public double getUuTien(){
+    private double getUuTien(){
         if(maXetTuyen.charAt(1) == '1'){
             return 2.0;
         }
