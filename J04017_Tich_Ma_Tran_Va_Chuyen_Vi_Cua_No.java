@@ -1,4 +1,4 @@
-///Created by Campus
+//Created by Campus
 package tich_ma_tran_va_chuyen_vi_cua_no;
 import java.util.*;
 import java.lang.*;
