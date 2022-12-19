@@ -7,6 +7,27 @@ import java.util.*;
 import java.time.*;
 import java.io.*;
 //
+class GiangVien {
+    private String code, name;
+    private double total;
+    public GiangVien(String code, String name){
+        this.code = code;
+        this.name = name;
+        this.total = 0;
+    }
+    public void addTime(double time){
+        this.total += time;
+    }
+    public String getCode(){
+        return this.code;
+    }
+    @Override
+    public String toString(){
+        return name + " " + String.format("%.2f", total);
+    }
+}
+
+//
 public class Tinh_Gio_Chuan {
     public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
