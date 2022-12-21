@@ -17,7 +17,7 @@ public class Tim_Vi_Tri_Xau_Con {
             String s_2 = sc.nextLine();
             try {
                 int index = -1;
-                while(index < s_1.length() - 1){
+                while(true){
                     index = s_1.indexOf(s_2, index + 1);
                     if(index == -1) break;
                     System.out.print(index + 1 +" ");
