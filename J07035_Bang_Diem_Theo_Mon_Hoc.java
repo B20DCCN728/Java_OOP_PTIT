@@ -7,6 +7,69 @@ import java.util.*;
 import java.time.*;
 import java.io.*;
 //
+class Subjects {
+    private String code, name, count;
+    public Subjects(String code, String name, String count){
+        this.code = code;
+        this.name = name;
+        this.count = count;
+    }
+    public String getCode(){
+        return code;
+    }
+    public String getName(){
+        return name;
+    }
+}
+//
+class Students {
+    private String code, name = "", group, email;
+    public Students(String code, String nameNotFormat, String group, String email){
+        this.code = code;
+        String [] tmp = nameNotFormat.trim().toLowerCase().split("\\s+");
+        for(int i = 0;i < tmp.length;i++){
+            this.name += Character.toUpperCase(tmp[i].charAt(0)) + tmp[i].substring(1) + " ";
+        }
+        this.name = this.name.trim();
+        this.name = name;
+        this.group = group;
+        this.email = email;
+    }
+    public String getCode(){    
+        return code;
+    }    
+    @Override
+    public String toString(){
+        return code + " " + name + " " + group;
+    }
+}
+//
+class Points implements Comparable<Points> {
+    private Students stu;
+    private Subjects sub;
+    private double point;
+    public Points(Students stu, Subjects sub, double point){
+        this.stu = stu;
+        this.sub = sub;
+        this.point = point;
+    }
+    public String getSubjectCode(){
+        return sub.getCode();
+    }
+    @Override
+    public int compareTo(Points x){
+        if(this.point != x.point) return Double.compare(x.point, this.point);
+        return this.stu.getCode().compareTo(x.stu.getCode());
+    }
+    @Override
+    public String toString(){
+        String tmp;
+        if((int)point == point) tmp = String.valueOf((int)point);
+        else tmp = String.format("%.1f", point);
+        return stu + " " + tmp;
+    }
+}
+//
 public class Bang_Diem_Theo_Mon_Hoc {
     public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
