@@ -7,6 +7,27 @@ import java.util.*;
 import java.time.*;
 import java.io.*;
 //
+class Products {
+    static HashMap<String, Products> list = new HashMap<>();
+    private String code, name;
+    private int price, time;
+    public Products(String code, String name, int price, int time){
+        this.code = code;
+        this.name = name;
+        this.price = price;
+        this.time = time;
+    }
+    public String getCode(){
+        return code;
+    }
+    public int getPrice(){
+        return price;
+    }
+    public int getTime(){
+        return time;
+    }
+}
+//
 class Clients implements Comparable<Clients>{
     static int id = 0;
     private String code, name, address, productCode;
