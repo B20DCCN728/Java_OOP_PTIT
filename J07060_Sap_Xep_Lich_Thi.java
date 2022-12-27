@@ -25,8 +25,8 @@ class MonThi {
 }
 //
 class CaThi {
-    static HashMap<String, CaThi> list = new HashMap<>();
     static int thuTu = 0;
+    static HashMap<String, CaThi> list = new HashMap<>();
     private String maCaThi, phongThi;
     private Date ngayThi, gioThi;
     private SimpleDateFormat myDate_1 = new SimpleDateFormat("dd/MM/yyyy");
