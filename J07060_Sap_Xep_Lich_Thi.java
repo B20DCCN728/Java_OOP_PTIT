@@ -84,7 +84,7 @@ public class Sap_Xep_Lich_Thi {
         SimpleDateFormat myDate_1 = new SimpleDateFormat("dd/MM/yyyy");
         SimpleDateFormat myDate_2 = new SimpleDateFormat("HH:mm");
         int n = Integer.parseInt(sc_1.nextLine());
-        for(int  i = 0;i < n;i++){
+        for(int i = 0;i < n;i++){
             MonThi tmp = new MonThi(sc_1.nextLine(), sc_1.nextLine(), sc_1.nextLine());
             MonThi.list.put(tmp.getMaMon(), tmp);
         }
