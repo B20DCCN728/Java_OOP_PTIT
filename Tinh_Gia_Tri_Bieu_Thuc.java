@@ -73,7 +73,7 @@ public class Tinh_Gia_Tri_Bieu_Thuc {
             while(!q.isEmpty()){
                 try {
                     int k = Integer.parseInt(q.peek());
-                    System.out.println(k);
+                    //System.out.println(k);
                     p.add(k);
                     q.poll();
                 }
@@ -98,9 +98,10 @@ public class Tinh_Gia_Tri_Bieu_Thuc {
                         p.push(s3);
                     }
                     q.poll();
-                    System.out.println(s3);
+                    //System.out.println(s3);
                 }
-            }          
+            }    
+            System.out.println(p.pop());
         }
     }
     
