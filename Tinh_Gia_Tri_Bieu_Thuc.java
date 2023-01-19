@@ -66,9 +66,9 @@ public class Tinh_Gia_Tri_Bieu_Thuc {
             while(!prefix.isEmpty()){
                 q.add("" + prefix.pop());
             }
-//                while(!q.isEmpty()){
-//                    System.out.println(q.poll());
-//                }
+//          while(!q.isEmpty()){
+//              System.out.println(q.poll());
+//          }
             Stack<Integer> p = new Stack<>();
             while(!q.isEmpty()){
                 try {
