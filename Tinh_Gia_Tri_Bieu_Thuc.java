@@ -74,7 +74,7 @@ public class Tinh_Gia_Tri_Bieu_Thuc {
                 try {
                     int k = Integer.parseInt(q.peek());
                     //System.out.println(k);
-                    p.add(k);
+                    p.push(k);
                     q.poll();
                 }
                 catch(Exception e) {
