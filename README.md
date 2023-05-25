@@ -1,5 +1,5 @@
 # Java_OOP
 Object-Oriented Programming.
-Link PTIT: https://code.ptit.edu.vn.
+Link PTIT website: https://code.ptit.edu.vn.
 
-Lời giải được trình bày thành 1 file code như trên cho dễ đọc. Khi code nên chia thành các file class riêng cho dễ thao tác.
+##Nhiều bài hướng đối tượng nên tách riêng mỗi lớp thành 1 file .java riêng biệt, tiện cho việc sửa đổi, bổ sung. 
